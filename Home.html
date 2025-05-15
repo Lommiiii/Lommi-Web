@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello I'm Lommi</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 花瓣飘落容器 -->
+  <div class="petal-container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+
+  <section class="panel panel-hero">
+    <header>
+      <!-- 添加 target="_blank" 让链接在新标签页打开 -->
+      <a href="D:\学校\简历网站\Home\Home.html" target="_blank">Home</a>
+      <a href="D:\学校\简历网站\My works\work.html" target="_blank">My works</a>
+      <a href="D:\学校\简历网站\Fan fiction\Fan fiction.html" target="_blank">Fan fiction</a>
+      <a href="D:\学校\简历网站\MY OC\MY OC.html" target="_blank">MY OC</a>
+      <a href="D:\学校\简历网站\Understand\Understand.html" target="_blank">Understand</a>
+    </header>
+    <div class="hero">
+      <h1>HELLO<br>I'M LOMMI</h1>
+      <p>This is my personal website</p>
+    </div>
+  </section>
+
+  <section class="panel panel-intro">
+    <div class="wrapper">
+      <div class="panel-intro">
+        <div class="avatar">
+          <!-- 为图片添加内联样式 -->
+          <img src="D:\学校\简历网站\图片\try-02.png" alt="头像" onclick="修改图片逻辑函数()" style="width: 45vw; height: 45vw; max-width: 500px; max-height: 500px; border-radius: 50%;">
+        </div>
+        <div class="intro">
+          <h2>HELLO, IM Lommi</h2>
+          <div class="dynamic-text">
+            <span>动态字符好难写...拜托了谁来给我一个解脱吧</span>
+          </div>
+          <!-- 新增图标容器 -->
+  <div class="icon-container">
+    <a href="https://huaban.com/pins/5961910639" target="_blank" title="我的Bilibili">
+      <img src="D:\学校\简历网站\图片\Webslite.png" alt="跳转图标">
+    </a>
+    <a href="your_gmail_link" target="_blank">
+      <img src="D:\学校\简历网站\图片\Gmail.png" alt="Gmail 图标"title="我的邮箱">
+    </a>
+    <a href="your_message_link" target="_blank">
+      <img src="D:\学校\简历网站\图片\message.png" alt="消息图标"title="联系我">
+    </a>
+    <a href="your_seek_link" target="_blank">
+      <img src="D:\学校\简历网站\图片\Seek.png" alt="Seek 图标"title="搜索">
+    </a>
+  </div>
+          <div class="bio-box">你好！我是Lommi<br>
+            香蕉鱼/游戏爱好者，深度收集癖<br>
+            为产品拉磨的同人女一条，杂食大师傅，婉拒一切跳脸<br>
+            永远睡不醒，永远比月亮睡得晚<br>
+            欢迎来到我的小网站，我会分享我收集到的各种东西❤<br>
+            无论是什么方面的事情，还请自行查看吧！<br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+  
+  </section>
+
+  <section class="panel panel-footer">
+    <div class="footer">
+      <h2>你想知道..?</h2>
+      <div class="buttons">
+        <!-- 添加 target="_blank" 让链接在新标签页打开 -->
+        <a href="D:\学校\简历网站\My works\work.html" target="_blank">My works</a>
+        <a href="D:\学校\简历网站\Fan fiction\Fan fiction.html" target="_blank">Fan fiction</a>
+        <a href="D:\学校\简历网站\MY OC\MY OC.html" target="_blank">MY OC</a>
+        <a href="D:\学校\简历网站\Understand\Understand.html" target="_blank">Understand</a>
+        </div>
+    </div>
+  </section>
+<script>
+  function scalePage() {
+    const baseWidth = 1920;
+    const baseHeight = 1080;
+    const scaleX = window.innerWidth / baseWidth;
+    const scaleY = window.innerHeight / baseHeight;
+    const scale = Math.min(scaleX, scaleY); // 保证不超出视口
+    document.querySelector('.wrapper').style.transform = `scale(${scale})`;
+  }
+
+  window.addEventListener('resize', scalePage);
+  window.addEventListener('load', scalePage);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* 页面全局设置，应用于整个页面 */
+body {
+    margin: 0; /* 去除默认边距 */
+    font-family: 'Montserrat', sans-serif; /* 设置基础字体 */
+    overflow-y: scroll; /* 启用垂直滚动条 */
+    scroll-snap-type: y mandatory; /* 启用纵向滚动吸附效果，对应每个 section */
+}
+
+/* 每个 section 块（即页面中的面板） */
+section {
+    width: 100vw; /* 宽度为整个视口 */
+    height: 100vh; /* 高度为整个视口（全屏） */
+    scroll-snap-align: start; /* 滚动对齐到顶部 */
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 第一页背景样式 */
+.panel-hero {
+    background: linear-gradient(to right, #ffcccc, #ccffff); /* 渐变背景 */
+    text-align: center;
+    position: relative;
+}
+
+/* 文本新增样式：使用更具体的选择器，确保样式生效 */
+body > section.panel > div.hero {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    font-size: 1em; /* 缩小文字大小 */
+}
+
+/* 顶部导航栏（在 panel-hero 中） */
+header {
+    position: fixed; /* 固定在页面右上角，下滑时保持位置 */
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 20px; /* 按钮之间间距 */
+    z-index: 1000; /* 确保导航栏在其他元素之上 */
+}
+
+/* 顶部导航按钮样式 */
+header a {
+    background: #ffffff;
+    color: #000000;
+    width: 70px;
+    height: 50px;
+    border-radius: 50%; /* 保持圆形 */
+    text-decoration: none;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 防止图标或文字溢出 */
+    flex-shrink: 0; /* 防止在 flex 容器中被压缩 */
+    box-sizing: border-box; /* 防止 padding 或内容撑破按钮尺寸 */
+}
+
+/* 花瓣容器 */
+.petal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/* 单个花瓣 */
+.petal {
+    position: absolute;
+    background-image: url('D:\\学校\\简历网站\\图片\\star.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+}
+
+/* 花瓣飘落动画 */
+@keyframes fall {
+    0% {
+        opacity: 1;
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0.8;
+        top: 100%;
+        transform: translateX(200px) rotate(360deg);
+    }
+}
+
+/* 为每个花瓣添加不同的初始位置、大小和延迟 */
+.petal:nth-child(1) {
+    left: 5%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 1s;
+}
+
+.petal:nth-child(2) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 3s;
+}
+
+.petal:nth-child(3) {
+    left: 35%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 2s;
+}
+
+.petal:nth-child(4) {
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    animation-delay: 4s;
+}
+
+.petal:nth-child(5) {
+    left: 65%;
+    width: 22px;
+    height: 22px;
+    animation-delay: 1.5s;
+}
+
+.petal:nth-child(6) {
+    left: 80%;
+    width: 16px;
+    height: 16px;
+    animation-delay: 3.5s;
+}
+
+.petal:nth-child(7) {
+    left: 90%;
+    width: 21px;
+    height: 21px;
+    animation-delay: 2.5s;
+}
+
+.petal:nth-child(8) {
+    left: 15%;
+    width: 17px;
+    height: 17px;
+    animation-delay: 4.5s;
+}
+
+.petal:nth-child(9) {
+    left: 40%;
+    width: 19px;
+    height: 19px;
+    animation-delay: 0.5s;
+}
+
+.petal:nth-child(10) {
+    left: 70%;
+    width: 23px;
+    height: 23px;
+    animation-delay: 5s;
+}
+
+/* 自我介绍区域样式 */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.bio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    color: #333;
+}
+  
